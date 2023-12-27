@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playpen Sans', cursive;
+}
+
+.luckyMoney {
+    background-image: url('../img/back.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 914px;
+}
+
+.header {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.header__navbar {
+    /* margin-bottom: 20px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-ava {
+    display: flex;
+}
+
+.header-ava img {
+    height: 70px;
+    border-radius: 50%;
+}
+
+.bodyLucky {
+    height: 200px;
+}
