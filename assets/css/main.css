@@ -20,7 +20,6 @@
 }
 
 .header__navbar {
-    /* margin-bottom: 20px; */
     display: flex;
     justify-content: space-between;
 }
@@ -37,8 +36,7 @@
 /* BodyLucky */
 
 .bodyLucky {
-    /* height: 200px; */
-    /* margin-left: 20px; */
+
 }
 
 .container {
@@ -46,8 +44,7 @@
 }
 
 .row {
-    /* justify-content: space-around; */
-    /* text-align: center; */
+
 }
 
 .col {
@@ -56,23 +53,69 @@
 }
 
 .card {
+    display: flex;
+    position: relative;
     width: 150px;
     height: 250px;
-    background-color: red;
-    border-right: red solid 70px;
-    border-left: red solid 70px;
-    border-top: orange solid 62.5px;
-    border-radius: 10px;
+    background-color: rgba(247, 89, 89);
+    border: #000000c5 solid 3.5px;
+    border-radius: 18px;
+    justify-content: center;
+}
+
+.trapezoid {
+    width: 70px;
+    height: 40px;
+    border-bottom: #000000c5 solid 3.5px;
+    background-color: rgba(247, 89, 89);
+}
+
+.trapezoid::before {
+    content: ' ';
+    position: absolute;
+    display: block;
+    background-color: rgba(247, 89, 89);
+    width: 37px;
+    height: 37px;
+    top: 0;
+    left: 10px;
+    transform: skew(20deg);
+    border-bottom-left-radius: 18px;
+    border-top-left-radius: 8px;
+    /* border-top: 3.5px solid #000000c5; */
+    border-bottom: 3.5px solid #000000c5;
+    border-left: 3.5px solid #000000c5;
+}
+
+.trapezoid::after {
+    content: ' ';
+    position: absolute;
+    display: block;
+    background-color: rgba(247, 89, 89);
+    width: 37px;
+    height: 37px;
+    top: 0;
+    right: 10px;
+    transform: skew(-20deg);
+    border-bottom-right-radius: 18px;
+    border-top-right-radius: 8px;
+    /* border-top: 3.5px solid #000000c5; */
+    border-bottom: 3.5px solid #000000c5;
+    border-right: 3.5px solid #000000c5;
+}
+
+.cricle {
+    position: absolute;
+    top: 10%;
+    border: #000000c5 solid 3.5px;
+    background-color: #FFD700;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
 }
 
 .back1 {
-    width: 100px;
-    height: 100px;
-    background-color: #000;
-    /* border-right: green solid 35px; */
-    border-left: green solid 35px;
-    border-top: #fff solid 20px;
-    border-bottom: green solid 50px;
+    
 }
 
 @media (max-width: 1023px) {
