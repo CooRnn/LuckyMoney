@@ -1,3 +1,8 @@
+:root {
+    --back-border: #333;
+    --red-card: rgba(247, 89, 89);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +36,12 @@
 .header-ava img {
     height: 70px;
     border-radius: 50%;
+    border: 3px solid #fff;
+    cursor: pointer;
+}
+
+.header-main {
+    margin-left: 12px;
 }
 
 /* BodyLucky */
@@ -57,65 +68,104 @@
     position: relative;
     width: 150px;
     height: 250px;
-    background-color: rgba(247, 89, 89);
-    border: #000000c5 solid 3.5px;
+    background-color: var(--red-card);
+    border: var(--back-border) solid 3.5px;
     border-radius: 18px;
     justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.card:hover {
+    cursor: pointer;
+    transition: all 2s;
+    transform: rotateY(360deg);
 }
 
 .trapezoid {
-    width: 70px;
-    height: 40px;
-    border-bottom: #000000c5 solid 3.5px;
-    background-color: rgba(247, 89, 89);
 }
 
 .trapezoid::before {
     content: ' ';
     position: absolute;
     display: block;
-    background-color: rgba(247, 89, 89);
-    width: 37px;
+    background-color: var(--red-card);
+    width: 80px;
     height: 37px;
     top: 0;
     left: 10px;
     transform: skew(20deg);
-    border-bottom-left-radius: 18px;
     border-top-left-radius: 8px;
-    /* border-top: 3.5px solid #000000c5; */
-    border-bottom: 3.5px solid #000000c5;
-    border-left: 3.5px solid #000000c5;
+    border-bottom-left-radius: 18px;
+    border-bottom: 3.5px solid var(--back-border);
+    border-left: 3.5px solid var(--back-border);
+    z-index: 1;
 }
 
 .trapezoid::after {
     content: ' ';
     position: absolute;
     display: block;
-    background-color: rgba(247, 89, 89);
-    width: 37px;
+    background-color: var(--red-card);
+    width: 20px;
     height: 37px;
     top: 0;
     right: 10px;
     transform: skew(-20deg);
-    border-bottom-right-radius: 18px;
     border-top-right-radius: 8px;
-    /* border-top: 3.5px solid #000000c5; */
-    border-bottom: 3.5px solid #000000c5;
-    border-right: 3.5px solid #000000c5;
+    border-bottom-right-radius: 18px;
+    border-bottom: 3.5px solid var(--back-border);
+    border-right: 3.5px solid var(--back-border);
+    z-index: 1;
 }
 
 .cricle {
     position: absolute;
-    top: 10%;
-    border: #000000c5 solid 3.5px;
+    border: var(--back-border) solid 3.5px;
     background-color: #FFD700;
     height: 90px;
     width: 90px;
     border-radius: 50%;
+    transition: .5s;
+}
+
+.rhombus {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    background-color: var(--red-card);
+    border: var(--back-border) solid 3.5px;
+    border-radius: 4px;
+    transform: rotate(45deg);
+}
+
+.footer-card {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    bottom: 15px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rhombuses {
+    height: 24px;
+    width: 24px;
+    background-color: #FFD700;
+    border: var(--back-border) solid 3.5px;
+    border-radius: 4px;
+    transform: rotate(45deg);
 }
 
 .back1 {
-    
+    height: 50px;
+    width: 150px;
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 @media (max-width: 1023px) {
