@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playpen Sans', cursive;
+}
+
+.luckyMoney {
+    background-image: url('../img/back.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 914px;
+}
+
+.header {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+}
+
+.header__navbar {
+    /* margin-bottom: 20px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-ava {
+    display: flex;
+}
+
+.header-ava img {
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* BodyLucky */
+
+.bodyLucky {
+    /* height: 200px; */
+    /* margin-left: 20px; */
+}
+
+.container {
+    text-align: center;
+}
+
+.row {
+    /* justify-content: space-around; */
+    /* text-align: center; */
+}
+
+.col {
+    justify-content: space-around;
+    text-align: center;
+}
+
+.card {
+    width: 150px;
+    height: 250px;
+    background-color: red;
+    border-right: red solid 70px;
+    border-left: red solid 70px;
+    border-top: orange solid 62.5px;
+    border-radius: 10px;
+}
+
+.back1 {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    /* border-right: green solid 35px; */
+    border-left: green solid 35px;
+    border-top: #fff solid 20px;
+    border-bottom: green solid 50px;
+}
+
+@media (max-width: 1023px) {
+    .card {
+        margin-top: 12px;
+    }
+}
