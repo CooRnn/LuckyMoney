@@ -8,7 +8,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Playpen Sans', cursive;
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 
 .luckyMoney {
@@ -30,33 +29,24 @@
     justify-content: space-between;
 }
 
-.header-ava {
+.header__ava {
     display: flex;
 }
 
-.header-ava img {
+.header__ava img {
     height: 70px;
     border-radius: 50%;
     border: 3px solid #fff;
     cursor: pointer;
 }
 
-.header-main {
+.header__main {
     margin-left: 12px;
 }
 
 /* BodyLucky */
-
-.bodyLucky {
-
-}
-
 .container {
     text-align: center;
-}
-
-.row {
-
 }
 
 .col {
@@ -67,55 +57,50 @@
 .card {
     display: flex;
     position: relative;
+    cursor: pointer;
     width: 150px;
     height: 250px;
-    background: linear-gradient(to top, #93291E, #ED213A);
-    border: var(--back-border) solid 3.5px;
-    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
     justify-content: center;
     align-items: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .card:hover {
     cursor: pointer;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.trapezoid {
-
-}
-
-.trapezoid::before {
-    content: ' ';
+.card__top {
     position: absolute;
-    display: block;
-    width: 80px;
-    height: 37px;
-    top: 0;
-    left: 10px;
-    transform: skew(20deg);
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 18px;
-    border-bottom: 3.5px solid var(--back-border);
-    border-left: 3.5px solid var(--back-border);
-    z-index: 1;
+    right: 0;
+    height: 250px;
+    border-style: solid;
+    border-width: 37px 80px 0 0;
+    border-color: transparent #e95f55 transparent  transparent;
+    z-index: 2;
 }
 
-.trapezoid::after {
-    content: ' ';
+.card__right {
     position: absolute;
-    display: block;
-    width: 20px;
-    height: 37px;
     top: 0;
-    right: 10px;
-    transform: skew(-20deg);
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 18px;
-    border-bottom: 3.5px solid var(--back-border);
-    border-right: 3.5px solid var(--back-border);
+    width: 150px;
+    height: 66.66667px;
+    border-style: solid;
+    border-width: 37px 33.33333px 0 33.33333px;
+    transform-origin: 50% 0%;
+    border-color: #cf4a43 transparent transparent transparent;
+    z-index: 3;
+}
+
+.card__left {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    height: 250px;
+    border-style: solid;
+    border-width: 37px 0 0 70.66667px;
+    border-color: transparent transparent transparent #e15349;
     z-index: 1;
 }
 
@@ -126,7 +111,8 @@
     height: 90px;
     width: 90px;
     border-radius: 50%;
-    transition: .5s;
+    transition: .6s;
+    z-index: 2;
 }
 
 .rhombus {
@@ -134,12 +120,15 @@
     height: 35px;
     width: 35px;
     border: var(--back-border) solid 3.5px;
-    background-color: #ED213A;
+    background-color: #e15349;
+    background: linear-gradient(to right, #e15349, #e95f55);
+
     border-radius: 4px;
     transform: rotate(45deg);
+    z-index: 2;
 }
 
-.footer-card {
+.card__footer {
     position: absolute;
     display: flex;
     width: 100%;
@@ -147,6 +136,7 @@
     bottom: 15px;
     align-items: center;
     justify-content: space-around;
+    z-index: 2;
 }
 
 .rhombuses {
@@ -158,13 +148,25 @@
     transform: rotate(45deg);
 }
 
+.footer__card {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    bottom: 15px;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .back1 {
     height: 50px;
     width: 150px;
-    background: -webkit-linear-gradient(to top, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: -webkit-linear-gradient(to top, #93291E, #ED213A);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #93291E, #ED213A);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 
 /* Choose Card */
 .chooseCard {
@@ -177,86 +179,145 @@
     background-color: rgba(0, 0, 0, 0.4);
     align-items: center;
     justify-content: center;
-    z-index: 1;
-    transition: all 2s;
+    z-index: 10;
 }
 
 .chooseCard.open {
     display: flex;
 }
 
-.chooseCard-card:active {
-    cursor: pointer;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
 
-.chooseCard-card {
+.animatedCard {
     display: flex;
-    position: relative;
+    position: absolute;
+    cursor: pointer;
     width: 225px;
     height: 375px;
-    background: linear-gradient(to top, #93291E, #ED213A);
-    border: var(--back-border) solid 5.25px;
-    border-radius: 15px;
+    transition: .4s;
+    background-color: #fff;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+    .right__envelope {
+        position: absolute;
+        right: 0;
+        height: 375px;
+        border-style: solid;
+        border-width: 55.5px 120px 0 0;
+        border-color: transparent #e95f55 transparent  transparent;
+        z-index: 2;
+    }
+
+    .top__envelope{
+        position: absolute;
+        top: 0;
+        width: 225px;
+        height: 100px;
+        border-style: solid;
+        border-width: 55.5px 50px 0 50px;
+        transform-origin: 50% 0%;
+        transition: transform 3s 3s, z-index 3s 3s;
+        border-color: #cf4a43 transparent transparent transparent;
+        z-index: 3;
+    }
+
+    .left__envelope {
+        position: absolute;
+        bottom: 0;
+        width: 225px;
+        height: 375px;
+        border-style: solid;
+        border-width: 55.5px 0 0 106px;
+        border-color: transparent transparent transparent #e15349;
+        z-index: 1;
+    }
+
+    .envelope {
+        position: absolute;
+        right: 14px;
+        bottom: 175px;
+        width: 200px;
+        height: 200px;
+        background: white;
+        z-index: 1;
+        overflow: hidden;
+        transition: 2s 2s;
+
+        .envelope__border {
+            height: 10px;
+            width: 100%;
+            background: repeating-linear-gradient(-45deg,
+                    #cb5a5e,
+                    #cb5a5e 8px,
+                    transparent 8px,
+                    transparent 18px);
+        }
+
+        .envelope__title {
+            margin-top: 10px;
+            margin-left: 5px;
+            height: 10px;
+            width: 40%;
+            background: #cb5a5e;
+        }
+
+        .envelope__context {
+            margin-top: 10px;
+            margin-left: 5px;
+            height: 10px;
+            width: 20%;
+            background: #cb5a5e;
+        }
+
+        .envelope__stamp {
+            margin-top: 30px;
+            margin-left: 120px;
+            border-radius: 100%;
+            height: 60px;
+            width: 60px;
+            background: #cb5a5e;
+            opacity: 0.3;
+        }
+    }
 }
 
-.chooseCard-card::before {
-    content: ' ';
-    position: absolute;
-    display: block;
-    width: 120px;
-    height: 55.5px;
-    top: 0;
-    left: 15px;
-    transform: skew(20deg);
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 27px;
-    border-bottom: 5.25px solid var(--back-border);
-    border-left: 5.25px solid var(--back-border);
-    z-index: 1;
+.animatedCard:hover {
+        transform: translateY(50px);
+
+    .top__envelope {
+        transition: transform 2.5s, z-index 3.5s;
+        transform: rotateX(180deg);
+        z-index: 0;
+    }
+
+    .envelope {
+        height: 350px;
+    }
 }
 
-.chooseCard-card::after {
-    content: ' ';
+.animatedCard__circle {
     position: absolute;
-    display: block;
-    width: 30px;
-    height: 55.5px;
-    top: 0;
-    right: 15px;
-    transform: skew(-20deg);
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 27px;
-    border-bottom: 5.25px solid var(--back-border);
-    border-right: 5.25px solid var(--back-border);
-    z-index: 1;
-}
-
-.chooseCard-cricle {
-    position: absolute;
-    border: var(--back-border) solid 5.25px;
+    border: var(--back-border) solid 5px;
     background-color: #FFD700;
     height: 135px;
     width: 135px;
     border-radius: 50%;
     transition: .5s;
+    z-index: 2;
 }
 
-.chooseCard-rhombus {
+.animatedCard__rhombus {
     position: absolute;
     height: 52.5px;
     width: 52.5px;
-    border: var(--back-border) solid 5.25px;
-    background-color: #ED213A;
-    border-radius: 9px;
+    border: var(--back-border) solid 4px;
+    background-color: #e95f55;
+    border-radius: 6px;
     transform: rotate(45deg);
+    z-index: 2;
 }
 
-.chooseCard-footer {
+.animatedCard__footer {
     position: absolute;
     display: flex;
     width: 100%;
@@ -264,14 +325,15 @@
     bottom: 22.5px;
     align-items: center;
     justify-content: space-around;
+    z-index: 2;
 }
 
-.chooseCard-rhombuses {
+.animatedCard__rhombuses {
     height: 36px;
     width: 36px;
     background-color: #FFD700;
-    border: var(--back-border) solid 5.25px;
-    border-radius: 9px;
+    border: var(--back-border) solid 4px;
+    border-radius: 6px;
     transform: rotate(45deg);
 }
 
