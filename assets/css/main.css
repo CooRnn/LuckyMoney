@@ -234,14 +234,17 @@
 
     .envelope {
         position: absolute;
-        right: 14px;
+        right: 24px;
         bottom: 175px;
-        width: 200px;
+        width: 180px;
         height: 200px;
         background: white;
         z-index: 1;
         overflow: hidden;
         transition: 2s 2s;
+        background-image: url("../img/100.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
 
         .envelope__border {
             height: 10px;

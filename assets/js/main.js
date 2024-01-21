@@ -6,37 +6,37 @@ const listData = [
         id: 1,
         coin: "2.000 VNĐ",
         color: "#fff",
-        img: "./img/2k.jpg",
+        img: "./img/2.jpg",
     },
     {
         id: 2,
-        coin: "5.000 VNĐ",
+        coin: "10.000 VNĐ",
         color: "blue",
-        img: "./img/5k.jpg",
+        img: "./img/10.jpg",
     },
     {
         id: 3,
-        coin: "10.000 VNĐ",
+        coin: "20.000 VNĐ",
         color: "yellow",
-        img: "./img/10k.jpg",
+        img: "./img/20.jpg",
     },
     {
         id: 4,
-        coin: "20.000 VNĐ",
+        coin: "50.000 VNĐ",
         color: "aqua",
-        img: "./img/20k.jpg",
+        img: "./img/50.jpg",
     },
     {
         id: 5,
-        coin: "50.000 VNĐ",
+        coin: "100.000 VNĐ",
         color: "pink",
-        img: "./img/50k.jpg",
+        img: "./img/100.jpg",
     },
     {
         id: 6,
-        coin: "100.000 VNĐ",
+        coin: "200.000 VNĐ",
         color: "green",
-        img: "./img/100k.jpg",
+        img: "./img/200.jpg",
     },
 ]
 
@@ -77,8 +77,27 @@ function closeChooseCard() {
 }
 
 for(const card of cards) {
-    card.addEventListener('click', showChooseCard)
-}
+    card.addEventListener('click', showChooseCard,
+
+    // listData.filter(function(e) {
+    //     return e.id === card[this]
+    // }), 
+    // console.log(2),
+    // return `<div class="animatedCard">
+    //             <div class="envelope"></div>
+    //             <div class="top__envelope"></div>
+    //             <div class="right__envelope"></div>
+    //             <div class="left__envelope"></div>
+    //             <div class="animatedCard__circle"></div>
+    //             <div class="animatedCard__rhombus">${e.id}</div>
+    //             <div class="animatedCard__footer">
+    //                 <div class="animatedCard__rhombuses"></div>
+    //                 <div class="animatedCard__rhombuses"></div>
+    //                 <div class="animatedCard__rhombuses"></div>
+    //             </div>
+    //         </div>`;
+    )}
+    // chooseCard.innerHTML = card.join(''),
 
 chooseCard.addEventListener('click', closeChooseCard)
 
@@ -87,6 +106,7 @@ animatedCard.addEventListener('click', function(e) {
 })
 
 
-//
+// xử lý bấm card
+
 
 
