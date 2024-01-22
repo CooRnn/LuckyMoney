@@ -16,7 +16,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 914px;
+    height: 900px;
 }
 
 .header {
@@ -49,9 +49,9 @@
     text-align: center;
 }
 
-.col {
-    justify-content: space-around;
-    text-align: center;
+.alignment {
+    display: flex;
+    justify-content: center;
 }
 
 .card {
@@ -122,7 +122,6 @@
     border: var(--back-border) solid 3.5px;
     background-color: #e15349;
     background: linear-gradient(to right, #e15349, #e95f55);
-
     border-radius: 4px;
     transform: rotate(45deg);
     z-index: 2;
@@ -158,16 +157,6 @@
     justify-content: space-around;
 }
 
-.back1 {
-    height: 50px;
-    width: 150px;
-    background: -webkit-linear-gradient(to top, #93291E, #ED213A);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #93291E, #ED213A);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-
 /* Choose Card */
 .chooseCard {
     display: none;
@@ -176,16 +165,17 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.293);
     align-items: center;
     justify-content: center;
     z-index: 10;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
 .chooseCard.open {
     display: flex;
 }
-
 
 .animatedCard {
     display: flex;
@@ -245,47 +235,12 @@
         background-image: url("../img/100.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-
-        /* .envelope__border {
-            height: 10px;
-            width: 100%;
-            background: repeating-linear-gradient(-45deg,
-                    #cb5a5e,
-                    #cb5a5e 8px,
-                    transparent 8px,
-                    transparent 18px);
-        }
-
-        .envelope__title {
-            margin-top: 10px;
-            margin-left: 5px;
-            height: 10px;
-            width: 40%;
-            background: #cb5a5e;
-        }
-
-        .envelope__context {
-            margin-top: 10px;
-            margin-left: 5px;
-            height: 10px;
-            width: 20%;
-            background: #cb5a5e;
-        }
-
-        .envelope__stamp {
-            margin-top: 30px;
-            margin-left: 120px;
-            border-radius: 100%;
-            height: 60px;
-            width: 60px;
-            background: #cb5a5e;
-            opacity: 0.3;
-        } */
     }
 }
 
 .animatedCard:hover {
-        transform: translateY(50px);
+    transform: translateY(50px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
     .top__envelope {
         transition: transform 2.5s, z-index 3.5s;
@@ -341,6 +296,10 @@
 }
 
 @media (max-width: 1023px) {
+    .luckyMoney {
+        height: 1150px;
+    }
+    
     .card {
         margin-top: 12px;
     }
