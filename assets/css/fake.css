@@ -1,0 +1,10 @@
+.fake {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    width: 20px;
+    opacity: .3;
+    background-color: transparent;
+    font-size: 10px;
+}

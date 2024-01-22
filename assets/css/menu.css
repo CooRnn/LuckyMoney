@@ -59,10 +59,6 @@ label.icon {
     transition: top ease .3s, transform ease .3s .3s;
 }
 
-#menu:checked ~ .haeder__select {
-    /* background-color: rgba(0, 0, 0, 0.293); */
-}
-
 nav {
     position: fixed;
     height: 60px;
@@ -78,7 +74,7 @@ nav {
     transition: width ease .6s, height ease .6s, opacity ease .6s;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-    z-index: 100;
+    z-index: 4;
 }
 
 #menu:checked ~ nav {
