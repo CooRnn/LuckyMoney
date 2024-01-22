@@ -5,40 +5,41 @@ const listData = [
     {
         id: 1,
         coin: "2.000 VNĐ",
-        color: "#fff",
-        img: "./img/2.jpg",
+        img: "assets/img/2.jpg",
     },
     {
         id: 2,
         coin: "10.000 VNĐ",
-        color: "blue",
-        img: "./img/10.jpg",
+        img: "assets/img/10.jpg",
     },
     {
         id: 3,
         coin: "20.000 VNĐ",
-        color: "yellow",
-        img: "./img/20.jpg",
+        img: "assets/img/20.jpg",
     },
     {
         id: 4,
         coin: "50.000 VNĐ",
-        color: "aqua",
-        img: "./img/50.jpg",
+        img: "assets/img/50.jpg",
     },
     {
         id: 5,
         coin: "100.000 VNĐ",
-        color: "pink",
-        img: "./img/100.jpg",
+        img: "assets/img/100.jpg",
     },
     {
         id: 6,
         coin: "200.000 VNĐ",
-        color: "green",
-        img: "./img/200.jpg",
+        img: "assets/img/200.jpg",
+    },
+    {
+        id: 7,
+        coin: "500.000 VNĐ",
+        img: "assets/img/500.jpg",
     },
 ]
+
+const envelope = $('.envelope')
 
 
 // Hiện thị dánh sách
@@ -70,6 +71,7 @@ const animatedCard = $('.animatedCard')
 
 function showChooseCard() {
     chooseCard.classList.add('open')
+    randomCoin()
 }
 
 function closeChooseCard() {
@@ -77,27 +79,8 @@ function closeChooseCard() {
 }
 
 for(const card of cards) {
-    card.addEventListener('click', showChooseCard,
-
-    // listData.filter(function(e) {
-    //     return e.id === card[this]
-    // }), 
-    // console.log(2),
-    // return `<div class="animatedCard">
-    //             <div class="envelope"></div>
-    //             <div class="top__envelope"></div>
-    //             <div class="right__envelope"></div>
-    //             <div class="left__envelope"></div>
-    //             <div class="animatedCard__circle"></div>
-    //             <div class="animatedCard__rhombus">${e.id}</div>
-    //             <div class="animatedCard__footer">
-    //                 <div class="animatedCard__rhombuses"></div>
-    //                 <div class="animatedCard__rhombuses"></div>
-    //                 <div class="animatedCard__rhombuses"></div>
-    //             </div>
-    //         </div>`;
-    )}
-    // chooseCard.innerHTML = card.join(''),
+    card.addEventListener('click', showChooseCard)
+}
 
 chooseCard.addEventListener('click', closeChooseCard)
 
@@ -106,7 +89,18 @@ animatedCard.addEventListener('click', function(e) {
 })
 
 
-// xử lý bấm card
+// randomCoin()
+function randomCoin() {
+    const max = Math.floor(Math.random() * 7) + 1;
+    const fill = listData.filter(function(e) {
+        return e.id === max
+    })
 
+    const ids = fill.map(function(e) {
+        return e.img
+    }).toString();
 
+    console.log(max, ids)
+    envelope.style.backgroundImage = `url("${ids}")`;
+}
 
